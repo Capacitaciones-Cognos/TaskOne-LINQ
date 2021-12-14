@@ -60,8 +60,8 @@ namespace HW13122021
         static void eliminarInventarioPorId(int ID)        {
             
             if (_listaInventarios.Find(op => op.id == ID) != null)
-            { 
-                _listaInventarios.RemoveAll(op => op.id == ID);                
+            {
+                _listaInventarios.RemoveAll(op => op.id == ID);
                 Console.WriteLine("Eliminacion exitosa");
             }
             else
@@ -73,6 +73,16 @@ namespace HW13122021
         //7. Index Of
         static int obtenerIndex(ObjInventario _inventario)
         {
+            int index =  _listaInventarios.IndexOf(_inventario);
+            if (index >= 0) // elemento existe en la lista
+            {
+                _listaInventarios.RemoveAt(index);
+                Console.WriteLine($"Elemento con id = {_inventario.id}, ha sido eliminado");
+            }
+            else
+            {
+                Console.WriteLine("Elemento no encontrado");
+            }
 
             return _listaInventarios.IndexOf(_inventario);
             
