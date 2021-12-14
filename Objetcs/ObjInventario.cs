@@ -13,5 +13,14 @@ namespace HW13122021.Objetcs
         public string cliente { get; set; }
         public int reponedor { get; set; }
         public int cantidad { get; set; }
+
+        public override bool Equals(object obj)
+        {
+            // CAST Object -> ObjInventario
+            //ObjInventario o2 = obj as ObjInventario;
+            ObjInventario o2 = (ObjInventario)obj;
+            return id == o2.id;
+        }
+
     }
 }
