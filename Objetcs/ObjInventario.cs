@@ -9,7 +9,7 @@ namespace HW13122021.Objetcs
     public class ObjInventario
     {
         public int id { get; set; }
-        public string producti { get; set; }
+        public string producto { get; set; }
         public string cliente { get; set; }
         public int reponedor { get; set; }
         public int cantidad { get; set; }
@@ -20,6 +20,10 @@ namespace HW13122021.Objetcs
             //ObjInventario o2 = obj as ObjInventario;
             ObjInventario o2 = (ObjInventario)obj;
             return id == o2.id;
+        }
+        public override string ToString()
+        {
+            return $"Id: {id}, PRODUCTO: {producto}, CLIENTE: {cliente}, REPONEDOR: {reponedor}, CANTIDAD: {cantidad}";
         }
 
     }

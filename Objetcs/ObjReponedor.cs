@@ -12,5 +12,10 @@ namespace HW13122021.Objetcs
         public string user { get; set; }
         public string nombre { get; set; }
         public string ap_paterno { get; set; }
+        public override string ToString()
+        {
+            return $"Id: {id}, USUARIO: {user}, NOMBRE: {nombre}, APELLIDO: {ap_paterno}";
+        }
     }
+
 }
